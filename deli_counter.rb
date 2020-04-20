@@ -6,14 +6,14 @@ def line(katz_deli)
       katz_deli.each_with_index { |name, i| new_array << "#{i + 1}. #{name}"}
         puts  "The line is currently: " << new_array.join(" ")
     end 
+
   end
-def take_a_number(katz_deli, name)
-  katz_deli << name
-  katz_deli.each_with_index do |n, i|
-    puts  "Welcome, #{n}. You are number #{i + 1} in line."
-  end
-  
+  def take_a_number(katz_deli, name)
+  katz_deli.push(name)
+  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
 end
+end
+
 def now_serving(katz_deli)
   if 
     katz_deli.size <= 0
